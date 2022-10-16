@@ -1,7 +1,7 @@
 export const environment = {
   useEmulators: false,
   production: true,
-  firebase: {
+  firebaseConfig: {
     apiKey: 'AIzaSyBLQaqH6bRQChFTTCu_OgY8weCXAa0UKpI',
     authDomain: 'wiselike-105bf.firebaseapp.com',
     projectId: 'wiselike-105bf',
