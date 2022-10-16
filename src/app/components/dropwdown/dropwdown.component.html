@@ -1,0 +1,9 @@
+<select title="{{selectTitle}}" class="form-select mt-3" required [formControl]="control" (change)="selectCurrency($event)">
+    <option selected>{{placeholder}}</option>
+    <ng-container *ngIf="!isDropDownObj">
+        <option  *ngFor="let dropdown of dropdowns" [value]="dropdown[id] ? dropdown[id] : dropdown">{{ dropdown['uid'] ?dropdown['uid']: dropdown }}</option>
+    </ng-container>
+    <ng-container *ngIf="isDropDownObj">
+        <option *ngFor="let dropdown of transformDropdown(dropdownObj)" [value]="dropdown">{{ dropdown }}</option>
+    </ng-container> 
+</select>

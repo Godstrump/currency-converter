@@ -1,0 +1,19 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="co-lg-11">
+            <mat-tab-group>
+                <mat-tab label="Transactions"> 
+                    <app-transactions></app-transactions>
+               </mat-tab>
+                <mat-tab label="Wallet"> 
+                    <app-wallet [dataSource]="currencies"></app-wallet>
+                 </mat-tab>
+             
+              <mat-tab label="New Transaction" class="mat-tab-body-content"> 
+                <app-add-transaction></app-add-transaction>
+             </mat-tab>
+          </mat-tab-group>
+        </div>
+    </div>
+  
+</div>

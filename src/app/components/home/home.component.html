@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="header">
+        <h1 class="text-danger mt-5">Wiselike</h1>
+        <p class="text-white">Transfer money from wallet to wallet</p>
+    </div>
+    <div class="row" *ngIf="!currentUser else loggedIn">
+        <div class="col-lg-6"><app-signin></app-signin></div>
+        <div class="col-lg-6"><app-signup></app-signup></div>
+    </div>
+
+    <ng-template #loggedIn>
+        <mat-tab-group>
+            <mat-tab label="Transactions"> 
+                <app-transactions></app-transactions>
+           </mat-tab>
+            <mat-tab label="Wallet"> 
+                <app-wallet></app-wallet>
+             </mat-tab>
+
+          </mat-tab-group>
+    </ng-template>
+</div>

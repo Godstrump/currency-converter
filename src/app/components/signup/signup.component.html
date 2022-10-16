@@ -1,0 +1,27 @@
+<div class="form-body">
+    <div class="row">
+        <div class="form-holder" [formGroup]="userForm" (ngSubmit)="submit(userForm.value)">
+            <div class="form-content">
+                <div class="form-items">
+                    <h3>Register Today</h3>
+                    <p>Fill in the data below.</p>
+                    <form class="requires-validation" novalidate>
+
+  
+                        <app-input type="text" name="name" placeholder="Full Name" [control]="abs(userForm.get('displayName'))"></app-input>
+
+                        <app-input type="email" name="email" placeholder="E-mail Address" [control]="abs(userForm.get('email'))"></app-input>
+                        
+                        <app-input type="password" name="password" placeholder="Password" [control]="abs(userForm.get('password'))"></app-input>
+                        <app-input type="password" name="password" placeholder="Confirm Password" [control]="abs(userForm.get('confirmPassword'))"></app-input>
+
+
+                        <app-button type="submit">
+                            Register
+                        </app-button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
